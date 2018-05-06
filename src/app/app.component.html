@@ -5,12 +5,15 @@
     <div class="text-center my-4">
        <button class="btn btn-success" (click)="show=!show">Acción</button>
     </div>
-    <p class="text-info" *ngIf="show">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius nobis, praesentium 
+    <p class="text-info" *ngIf="show; else showDos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius nobis, praesentium 
         blanditiis recusandae fugit consequatur pariatur voluptates tenetur accusantium 
         quas natus, dolores dolor perspiciatis rem quibusdam explicabo laborum, at ducimus.</p>
+    <ng-template  #showDos>
     <p class="text-danger">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet impedit a velit
-         voluptates hic nobis nesciunt molestias officia, labore, facilis iusto omnis
-          deleniti nisi. Consequatur ipsa doloribus sed sequi dignissimos.</p>
+     voluptates hic nobis nesciunt molestias officia, labore, facilis iusto omnis
+    deleniti nisi. Consequatur ipsa doloribus sed sequi dignissimos.</p>
+    </ng-template>
+    
 </div>
 
 <!-- <app-cabecera >
